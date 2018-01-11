@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         EditText user_email = (EditText) findViewById(R.id.user_email);
 
-   /*     EditText user_pswd = (EditText) findViewById(R.id.user_pswd);
+        EditText user_pswd = (EditText) findViewById(R.id.user_pswd);
 
         Button enter_app = (Button)findViewById(R.id.enter_app);
         enter_app.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, UserDetailsActivity.class);
                 startActivity(i);
             }
-        }); */
+        });
 
 
 

@@ -8,7 +8,7 @@
 
 
     <EditText
-        android:id="@+id/user_email"
+        android:id="@+id/user_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter email"
@@ -17,7 +17,7 @@
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/user_pswd"
+        android:id="@+id/user_login_pswd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter password"
