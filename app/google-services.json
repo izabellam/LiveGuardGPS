@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "302162129695",
+    "firebase_url": "https://lifeguardgps.firebaseio.com",
+    "project_id": "lifeguardgps",
+    "storage_bucket": "lifeguardgps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302162129695:android:0a2ae00a715f1efb",
+        "android_client_info": {
+          "package_name": "com.example.keren.liveguardgps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302162129695-iqjsrfbvptauntjg6s3p1n8ggqsrmlc7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.keren.liveguardgps",
+            "certificate_hash": "08c4406ecddd7784727a615a0922a90d74a6351a"
+          }
+        },
+        {
+          "client_id": "302162129695-c478jnhdklp87oon07beoo3pcevr3f5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ4C7cW7IA4-55pPz4LBmQT0WfnflwMzg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302162129695-c478jnhdklp87oon07beoo3pcevr3f5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
