@@ -1,4 +1,4 @@
-package com.example.keren.liveguardgps;
+package utils;
 
 public class PhoneNumberValidator {
 

@@ -1,14 +1,19 @@
 package com.example.keren.liveguardgps;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import static java.lang.Thread.*;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import utils.ConstantsClass;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,10 +23,48 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mail_pswd_layout);
 
+        //remember me logic
 
-        EditText user_email = (EditText) findViewById(R.id.user_email);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl(ConstantsClass.FIRE_BASE_URL);
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
-        EditText user_pswd = (EditText) findViewById(R.id.user_pswd);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        // Firebase connection email main id, save email main id and all the pets
+        // List of pets, Pets class
+        // google maps show pets location
+        // screen adding new pets to app, add image
+        // screen user profile , change settings
+
+        //HW
+        //dimens
+        // beutifull screens
+
+       final EditText user_email = (EditText) findViewById(R.id.user_email);
+
+        final EditText user_pswd = (EditText) findViewById(R.id.user_pswd);
 
         Button enter_app = (Button)findViewById(R.id.enter_app);
         enter_app.setOnClickListener(new View.OnClickListener() {
@@ -36,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
         register_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, UserDetailsActivity.class);
+
+                Intent i = new Intent(MainActivity.this, UserSignUpDetailsActivity.class);
                 startActivity(i);
             }
         });
 
-
-
-
     }
+
+
 }

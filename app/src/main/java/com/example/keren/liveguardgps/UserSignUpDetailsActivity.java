@@ -8,11 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.firebase.client.Firebase;
+
+import VO.UserDetailsClass;
+import utils.ConstantsClass;
+
 /**
  * Created by Keren on 11/01/2018.
  */
 
-public class UserDetailsActivity extends Activity {
+public class UserSignUpDetailsActivity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,13 +36,34 @@ public class UserDetailsActivity extends Activity {
                 String userpswd = user_login_pswd.getText().toString();
                 String user_email_str = user_login_email.getText().toString();
 
+                saveDataToDB(user_email_str);
                 // go to database save user
 
-                Intent i = new Intent(UserDetailsActivity.this, MapsActivity.class);
+                Intent i = new Intent(UserSignUpDetailsActivity.this, MapsActivity.class);
                 startActivity(i);
 
             }
         });
 
+
+
+
+
+
+
     }
+
+    private Firebase mRootRef;
+    private void saveDataToDB(String email){
+        mRootRef = new Firebase(ConstantsClass.FIRE_BASE_URL);
+        Firebase userRef = mRootRef.child(email);
+        UserDetailsClass userDetailsClass = new UserDetailsClass();
+        userDetailsClass.setUserEmail(email);
+
+
+        userRef.setValue(userDetailsClass);
+
+
+    }
+
 }
