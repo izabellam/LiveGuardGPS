@@ -56,7 +56,9 @@ public class UserSignUpDetailsActivity extends Activity {
     private Firebase mRootRef;
     private void saveDataToDB(String email){
         mRootRef = new Firebase(ConstantsClass.FIRE_BASE_URL);
-        Firebase userRef = mRootRef.child(email);
+        String emailMain = email.replaceAll("@", "").replaceAll(".","");
+        System.out.println("Keren email = " + emailMain);
+        Firebase userRef = mRootRef.child(emailMain);
         UserDetailsClass userDetailsClass = new UserDetailsClass();
         userDetailsClass.setUserEmail(email);
 

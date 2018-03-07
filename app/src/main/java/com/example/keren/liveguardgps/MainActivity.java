@@ -21,7 +21,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mail_pswd_layout);
+        setContentView(R.layout.activity_signup);
+
+     /*   Button scan_bluetooth = (Button)findViewById(R.id.scan_bluetooth);
+        scan_bluetooth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        }); */
+
 
         //remember me logic
 
@@ -62,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         //dimens
         // beutifull screens
 
-       final EditText user_email = (EditText) findViewById(R.id.user_email);
+     /*  final EditText user_email = (EditText) findViewById(R.id.user_email);
 
         final EditText user_pswd = (EditText) findViewById(R.id.user_pswd);
 
@@ -83,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, UserSignUpDetailsActivity.class);
                 startActivity(i);
             }
-        });
+        }); */
 
     }
 

@@ -35,7 +35,7 @@ public class PetsDetailsScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 UserDetailsClass userDetailsClass = new UserDetailsClass();
-                userDetailsClass.setPetsClasses();
+              //  userDetailsClass.setPetsClasses();
             }
         });
 
@@ -48,7 +48,7 @@ public class PetsDetailsScreen extends AppCompatActivity {
         // no
 
     }
-    
+
     private void popupDialog(){
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(getBaseContext());

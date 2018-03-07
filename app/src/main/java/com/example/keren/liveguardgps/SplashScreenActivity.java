@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.keren.liveguardgps.login.LoginActivity;
+import com.example.keren.liveguardgps.login.SignupActivity;
+
 /**
  * Created by Keren on 11/01/2018.
  */
@@ -31,7 +34,9 @@ public class SplashScreenActivity extends Activity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashScreenActivity.this, MainActivity.class);
+
+                //Intent i = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                Intent i = new Intent(SplashScreenActivity.this, SignupActivity.class);
                 startActivity(i);
                 // close this activity
                 finish();
